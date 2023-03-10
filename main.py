@@ -185,4 +185,20 @@ print(quote.find('be')) #be starts at index 3
 print(quote.replace('be', 'me'))
 
 #Booleans
-.
+#bool can only be either True or False
+name = 'Andrei'
+is_cool = False
+
+is_cool = True
+
+print(bool(1))
+#1 evaluates to True, 0 to False
+
+#Type conversion exercise
+birth_year = input('What year were you born? ')
+age = 2023 - int(birth_year)
+print(f'You are {age} years old.')
+
+# Developer Fundametals II
+# https://realpython.com/python-comments-guide/
+
