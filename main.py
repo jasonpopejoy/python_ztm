@@ -202,3 +202,41 @@ print(f'You are {age} years old.')
 # Developer Fundametals II
 # https://realpython.com/python-comments-guide/
 
+
+# Lists - ordered sequence of objects of any type
+# aka 'arrays' in other languages
+li = [1,2,3,4,5]
+li2 = ['a', 'b', 'c']
+li3 = [1, 2, 'a', True]
+
+amazon_sucks = ['notebooks', 'sunglasses']
+print(amazon_sucks[0]) #accessing index of list
+
+# List slicing
+amazon_sucks = [
+    'notebooks',
+    'sunglasses',
+    'board games',
+    'cheap crap'
+]
+print(amazon_sucks[0:2]) #functions similar to string slicing
+print(amazon_sucks[0::2])
+
+amazon_sucks[0] = 'laptop' 
+print(amazon_sucks[0:3])
+print(amazon_sucks)
+
+# Copies to a new list  v
+new_cart = amazon_sucks[:]
+
+# Matrix - desribes 2D lists - lists inside of lists
+matrix = [
+    [1,2,3],
+    [2,4,6],
+    [7,8,9]
+]
+# 0 accesses first list and 1 access the second index in the first list
+print(matrix[0][1])
+
+
+# List Methods
