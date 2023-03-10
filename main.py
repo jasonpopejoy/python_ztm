@@ -127,3 +127,61 @@ print(weather)
 # \t tabs, \n newline
 
 #formatted strings 
+name = 'Johnny'
+age = 55
+print(f'Hi, {name}. You are {age} years old')
+#.format - usually used in python 2. fstrings are better/easier
+print('Hi, {}. You are {} years old'.format(name, age))
+
+#string indexes
+selfish = '01234567'
+#          01234567
+#slicing      v
+print(selfish[0])
+print(selfish[7])
+#[start:stop:stepover]
+print(selfish[0:2])
+print(selfish[0:8])
+print(selfish[0:8:2])
+print(selfish[1:])
+print(selfish[:5])
+print(selfish[::1])
+print(selfish[-1])
+print(selfish[::-1]) #reverses order of sring
+
+#Guess the output of each print statement before you click RUN!
+python = 'I am PYTHON'
+
+print(python[1:4])
+# am 
+print(python[1:])
+# am PYTHON
+print(python[:])
+#I am PYTHON
+print(python[1:100])
+# am PYTHON
+print(python[-1])
+#N
+print(python[-4])
+#T
+print(python[:-3])
+#I am PYT
+print(python[-3:])
+#HON
+print(python[::-1])
+#NOHTYP ma I
+
+#Immutability 
+#selfish[0] = '8' is invalid code because of immutability 
+# only way to change is to reassign string to selfish 
+
+#Built in Functions and Methods
+print(len('hellooooooo')) #len() calulates the length of a string, starting at 1
+#.format() - method starts with dot .
+quote = 'to be or not to be'
+print(quote.upper()) #uppercase string
+print(quote.capitalize()) #capitalizes first letter
+print(quote.find('be')) #be starts at index 3
+print(quote.replace('be', 'me'))
+
+#Booleans
