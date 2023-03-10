@@ -195,9 +195,9 @@ print(bool(1))
 #1 evaluates to True, 0 to False
 
 #Type conversion exercise
-birth_year = input('What year were you born? ')
-age = 2023 - int(birth_year)
-print(f'You are {age} years old.')
+#birth_year = input('What year were you born? ')
+#age = 2023 - int(birth_year)
+#print(f'You are {age} years old.')
 
 # Developer Fundametals II
 # https://realpython.com/python-comments-guide/
@@ -259,3 +259,115 @@ basket = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 print(basket[1][1][0])
 
 # List Methods
+#basket = [1,2,3,4,5]
+
+#adding
+#new_list = basket.append(100) #modifies list in place, doesn't create a new copy
+#basket.insert(0, 101) #modifies list in place, doesn't create new copy
+#new_list = basket.extend([102,104])
+#print(basket)
+#print(new_list)
+
+#removing
+#basket.pop() #pops off last item in list
+#basket.pop(0) #removes at specified index, will return what is removed
+#basket.remove(3) #removes actual value
+#basket.clear() #completely clears what is in the list
+#print(basket)
+
+#indexing
+basket = ['a', 'b', 'c', 'd', 'e', 'd']
+print(basket.index('d')) # returns 3, as it specifies index of 'd'
+print(basket.index('d', 0, 4)) #starts at index 0 and ends at index 4
+
+print('d' in basket) #returns boolean
+print('i' in 'hi my name is Ian')
+
+print(basket.count('d')) #counts how many times a value is in a list
+
+# using this list, 
+basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+
+# 1. Remove the Banana from the list
+basket.pop(0)
+# 2. Remove "Blueberries" from the list.
+basket.pop()
+# 3. Put "Kiwi" at the end of the list.
+basket.append('Kiwis')
+# 4. Add "Apples" at the beginning of the list
+basket.insert(0, 'Apples')
+# 5. Count how many apples in the basket
+print(basket.count('Apples'))
+# 6. empty the basket
+basket.clear()
+print(basket)
+
+#sorting
+basket = ['a', 'b', 'x', 'd', 'c', 'd', 'f', 'e']
+basket.sort() #performs action in place
+basket.reverse () #reverses
+print(basket)
+print(sorted(basket)) #produces a new list
+new_basket = basket.copy() #copies to new list
+print(new_basket)
+
+#userful list tricks
+print(len(basket))
+print(basket[::-1]) # list slicing, creates a new list
+
+print(list(range(1,100))) #starts at 1, ends at 99
+
+new_sentence = ' '.join(['hi', 'my', 'name', 'is', 'jojo']) #string method
+print(new_sentence)
+
+#List Unpacking
+a,b,c, *other, d = [1,2,3,4,5,6,7,8,9]
+print(a)
+print(b)
+print(c)
+print(other)
+print(d)
+
+#fix this code so that it prints a sorted list of all of our friends (alphabetical). Scroll to see answer
+friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+new_friend = ['Stanley']
+
+friends.extend(new_friend)
+print(sorted(friends))
+
+# None - represents the absence of value
+weapons = None
+print(weapons)
+
+
+#Dictionaries - dict - data type and also a data structure
+dictionary = {
+    'a': [1,2,3],
+    'b': 'hello',
+    'x': True
+} 
+# dictioaries have unordered key:value pairs - scattered across memory
+print(dictionary['b'])
+print(dictionary)
+
+my_list = [
+    {
+    'a': [1,2,3],
+    'b': 'hello',
+    'x': True
+},
+{
+    'a': [4,5,6],
+    'b': 'hello',
+    'x': False
+} 
+]
+print(my_list[0]['a'][2])
+print(dictionary['a'][1])
+
+# Understanding Data Structures
+# what data structures to use when
+# Dictionary is not sorted, can store more info, key:value pairs
+# List has indexes and values
+
+# Dictionary Keys
