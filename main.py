@@ -347,6 +347,8 @@ dictionary = {
     'x': True
 } 
 # dictioaries have unordered key:value pairs - scattered across memory
+# ordered and changeable. no duplicates
+
 print(dictionary['b'])
 print(dictionary)
 
@@ -427,4 +429,104 @@ user_profile2 = user_profile.copy()
 user_profile2.update({'age': 69, 'username': 'Pope'})
 print(user_profile2)
 
-# Tuples
+capitals = {
+    "USA": "Washington DC",
+    "India": "New Dehli",
+    "China": "Beijing",
+    "Russia": "Moscow"
+}
+
+#print(dir(capitals))
+
+print(capitals.get("USA"))
+if capitals.get("Japan"):
+    print("That capital exists")
+else:
+    print("That capital doesn't exist")
+
+capitals.update({"Germany": "Berlin"})
+capitals.update({"USA": "Detroit"})
+capitals.pop("China")
+capitals.popitem() #removes the latest key:value pair that was inserted
+#capitals.clear()
+
+keys = capitals.keys() #keys method collects all keys in a dict
+
+for key in capitals.keys():
+    print(key)
+
+print(keys)
+print(capitals)
+
+values = capitals.values()
+for value in capitals.values():
+    print(value)
+print(values)
+
+items = capitals.items()
+for key, value in capitals.items():
+    print(f"{key}: {value}")
+
+
+# Tuples - immutable lists
+my_tuple = (1,2,3,4,5,5)
+print(5 in my_tuple)
+user = {
+    'basket': [1,2,3],
+    'greet': 'hello',
+    'age': 20
+}
+print(user.items()) # returns a tuple
+print(user["basket"])
+
+new_tuple = my_tuple[1:4]
+print(new_tuple)
+
+x,y,z, *other =(1,2,3,4,5)
+print(x)
+print(y)
+
+# tuples have only two methods - count and index
+print(my_tuple.count(5))
+print(my_tuple.index(5)) #returns index of 4
+print(len(my_tuple))
+
+# Sets - unordered collections of unique objects
+my_set = {1,2,3,4,5,5}
+my_set.add(100)
+my_set.add(2) # 2 isn't added because set already contains a 2
+print(my_set)
+
+my_list = [1,2,3,4,5,5]
+print(set(my_list)) #creates a new set from a list and removes all duplicate values
+
+# print(my_set[0]) - doesnt work
+
+print(list(my_set)) # set into list
+
+new_set = my_set.copy()
+print(new_set)
+print(my_set)
+
+# set methods
+
+myset = {1,2,3,4,5}
+your_set = {4,5,6,7,8,9,10}
+
+#print(myset.difference(your_set)) #prints differnce, duplicates get ignored
+
+#print(myset.discard(5)) # removes stated item
+#print(myset)
+
+#print(myset.difference_update(your_set)) #updates so the differences are removed from set
+#print(myset)
+
+#print(myset.intersection(your_set)) # returns 4,5 - common items between both sets
+#print(myset.isdisjoint(your_set)) #False - do sets have anything in common?
+myset = {4,5}
+print(myset.issubset(your_set)) # returns True because 4,5 is in your_set
+print(myset.issuperset(your_set)) # returns False because myset is not a superset
+print(your_set.issuperset(myset)) #returns True
+
+print(myset.union(your_set)) #combines set and removes any duplicates. returns a new set
+print(myset | your_set) # does the same as union
