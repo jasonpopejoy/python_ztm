@@ -370,4 +370,61 @@ print(dictionary['a'][1])
 # Dictionary is not sorted, can store more info, key:value pairs
 # List has indexes and values
 
-# Dictionary Keys
+# Dictionary Keys - can be strings, int, bools, but not lists
+# needs to be immutable and unique
+# usually something descriptive 
+
+# Dictionary Methods
+user = {
+    'basket': [1,2,3],
+    'greet': 'hello',
+    'age': 20
+}
+
+print(user.get('age')) # returns None because there is no 'age' key in user dict above
+# .get is a function
+print(user.get('age', 55)) # adds default value to age of 55, if age already exists in
+# list, it will return original value
+
+user2 = dict(name='jonjon')
+print(user2)
+# dict function to build dictionaries but is not as common as the first example
+
+print('basket' in user)
+print('size' in user.keys())
+print('hello' in user.values())
+print('....')
+print(user.pop('age')) # .pop removes the key age and returns the value
+print(user.items())
+print(user.clear()) #clear in place removes - creates an empty dictionary
+user2 = user.copy()
+print(user2)
+print(user.update({'age': 55})) # will update key age with new value, if value doesn't exist, will add it
+
+#1 Create a user profile for your new game. This user profile will be stored in a dictionary with keys: 'age', 'username', 'weapons', 'is_active' and 'clan'
+
+user_profile = { 
+    'age': 23,
+    'username': 'Flerp',
+    'weapons': ['ak', 'balisong'],
+    'is_active': True,
+    'clan': 'Derp' 
+}
+
+#2 iterate and print all the keys in the above user.
+print(user_profile.keys())
+#3 Add a new weapon to your user
+user_profile['weapons'].append('sais')
+print(user_profile)
+#4 Add a new key to include 'is_banned'. Set it to false
+user_profile.update({'is_banned': False})
+print(user_profile)
+#5 Ban the user by setting the previous key to True
+user_profile['is_banned'] = True
+print(user_profile)
+#6 create a new user2 my copying the previous user and update the age value and username value. 
+user_profile2 = user_profile.copy()
+user_profile2.update({'age': 69, 'username': 'Pope'})
+print(user_profile2)
+
+# Tuples
