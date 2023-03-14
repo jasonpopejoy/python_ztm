@@ -542,3 +542,14 @@ attendance_list = ['Jammy', 'Bobby', 'Danny', 'Sally']
 attendance_set = set(attendance_list)
 missing_students = set.difference(school, attendance_set)
 print(missing_students)
+
+# Quick Syntax Reminder between lists, dictionaries and tuples
+
+my_list = []
+my_list = list()
+
+my_tuple = (1, 2, 3, 4, 5)
+my_tuple[0:3]
+
+my_dict = {}
+another_dict = dict()
